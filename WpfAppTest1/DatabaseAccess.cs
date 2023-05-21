@@ -13,7 +13,7 @@ namespace WpfAppTest1
         public static string executeQuery(string sql, params object[] args)
         {
             SqlConnection lueftungssteuerungDb =
-                new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings["Lueftungssteuerung"]);
+                new SqlConnection(connectionString: System.Configuration.ConfigurationSettings.AppSettings["Lueftungssteuerung"]);
             SqlCommand sqlCommand = new SqlCommand();
 
             string result;
