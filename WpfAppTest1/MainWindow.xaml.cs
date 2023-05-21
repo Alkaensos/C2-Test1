@@ -15,13 +15,19 @@ using System.Windows.Shapes;
 
 namespace WpfAppTest1
 {
+    public class AktuelleSpannung
+    {
+        public string Spannung { get; set; }
+    }
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public AktuelleSpannung SpannungSource;
         public MainWindow()
         {
+            SpannungSource = new AktuelleSpannung();
             InitializeComponent();
         }
     }

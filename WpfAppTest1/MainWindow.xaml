@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button Content="Aus" HorizontalAlignment="Left" Margin="100,321,0,0" VerticalAlignment="Top"/>
+        <Button Content="Stufe 1" HorizontalAlignment="Left" Margin="129,321,0,0" VerticalAlignment="Top"/>
+        <Button Content="Stufe 2" HorizontalAlignment="Left" Margin="175,321,0,0" VerticalAlignment="Top"/>
+        <Button Content="Stufe X" HorizontalAlignment="Left" Margin="221,321,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="314,145,0,0" TextWrapping="Wrap" Text="Stufe" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="314,168,0,0" TextWrapping="Wrap" Text="Drehzahl" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="314,191,0,0" TextWrapping="Wrap" Text="Leistung" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="314,214,0,0" TextWrapping="Wrap" Text="Spannung" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
