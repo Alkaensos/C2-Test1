@@ -78,5 +78,30 @@ namespace WpfAppTest1
             get { return sollDauer; }
             set { sollDauer = value;}
         }
+        private int SollStufe;
+
+        public int sollStufe
+        {
+            get { return sollStufe; }
+            set { sollStufe = value;}
+        }
+        public void speichereMesswerte()
+        {
+            try
+            {
+                string sql = "INSERT INTO Aufzeichnung (Drehzahl, Leistung, Strom, Spannung, Zeitstempel) " +
+                             "Values (" + aktuelleDrehzahl + ", "
+                             + aktuelleLeistungsaufnahme + ", "
+                             + aktuellerStrom + ", "
+                             + aktuelleSpannung + ", "
+                             + "getdate()" +
+                             ")";
+                DatabaseAccess.setQuery(sql);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
     }
 }

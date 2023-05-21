@@ -57,8 +57,6 @@
     </ApplicationDefinition>
     <Compile Include="Betriebsdaten.cs" />
     <Compile Include="MesswerteDB.cs" />
-    <Compile Include="SetAktiv.cs" />
-    <Compile Include="SetAufzeichnung.cs" />
     <Compile Include="Zustandssimulation.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -69,7 +67,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DatabaseAccess.cs" />
-    <Compile Include="GetVorgaben.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
