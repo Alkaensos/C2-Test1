@@ -10,7 +10,7 @@ namespace WpfAppTest1
 {
     public class DatabaseAccess
     {
-        public static string executeQuery(string sql, params object[] args)
+        public static string getQuery(string sql, params object[] args)
         {
             SqlConnection lueftungssteuerungDb =
                 new SqlConnection(connectionString: System.Configuration.ConfigurationSettings.AppSettings["Lueftungssteuerung"]);
@@ -31,10 +31,42 @@ namespace WpfAppTest1
             }
             catch (Exception ex)
             {
+                throw;
+            }
+            finally
+            {
                 lueftungssteuerungDb.Close();
-                throw ex;
             }
             return result;
+        }
+        public static int setQuery(string sql, params object[] args)
+        {
+            SqlConnection lueftungssteuerungDb =
+                new SqlConnection(connectionString: System.Configuration.ConfigurationSettings.AppSettings["Lueftungssteuerung"]);
+            SqlCommand sqlCommand = new SqlCommand();
+
+            int rowCount;
+            try
+            {
+                sqlCommand.CommandText = sql;
+                sqlCommand.CommandType = CommandType.Text;
+                sqlCommand.Connection = lueftungssteuerungDb;
+                sqlCommand.CommandTimeout = 12 * 3600;
+
+                lueftungssteuerungDb.Open();
+
+                rowCount = sqlCommand.ExecuteNonQuery();
+                lueftungssteuerungDb.Close();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                lueftungssteuerungDb.Close();
+            }
+            return rowCount;
         }
     }
 }

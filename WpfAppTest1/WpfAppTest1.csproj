@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Betriebsdaten.cs" />
+    <Compile Include="Betriebszustand.cs" />
+    <Compile Include="MesswerteDB.cs" />
+    <Compile Include="SetAktiv.cs" />
+    <Compile Include="SetAufzeichnung.cs" />
+    <Compile Include="Zustandssimulation.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
