@@ -84,32 +84,32 @@ GO
 
 USE [Lueftungssteuerung]
 GO
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Stufen]') AND type in (N'U'))
-DROP TABLE [dbo].[Stufen]
-GO
-SET ANSI_NULLS ON
-SET QUOTED_IDENTIFIER ON
-GO
+--IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Stufen]') AND type in (N'U'))
+--DROP TABLE [dbo].[Stufen]
+--GO
+--SET ANSI_NULLS ON
+--SET QUOTED_IDENTIFIER ON
+--GO
 
-CREATE TABLE [dbo].[Stufen]
-   (
-	[ID] [int] IDENTITY(1,1) NOT NULL,
-	[Stufe] [int] NULL,
-	[Bezeichnung] Varchar(255) NULL,
-	[Drehzahl] [int] NULL,
-	[Leistung] [int] NULL,
-   [Spannung] [int] NULL,
-   [AktivJN] [bit] NOT NULL
-   ) ON [PRIMARY]
-GO
+--CREATE TABLE [dbo].[Stufen]
+--   (
+--	[ID] [int] IDENTITY(1,1) NOT NULL,
+--	[Stufe] [int] NULL,
+--	[Bezeichnung] Varchar(255) NULL,
+--	[Drehzahl] [int] NULL,
+--	[Leistung] [int] NULL,
+--   [Spannung] [int] NULL,
+--   [AktivJN] [bit] NOT NULL
+--   ) ON [PRIMARY]
+--GO
 
-INSERT INTO Stufen 
-   (Stufe, Bezeichnung, Drehzahl, Leistung, Spannung, AktivJN)
-Values
-   (0, 'Aus', 0, 0, 0, 1),
-   (1, 'Stufe 1', 30, 15, 230, 0),
-   (2, 'Stufe 2', 60, 45, 230, 0),
-   (3, 'Stufe X', 90, 60, 230, 0)
+--INSERT INTO Stufen 
+--   (Stufe, Bezeichnung, Drehzahl, Leistung, Spannung, AktivJN)
+--Values
+--   (0, 'Aus', 0, 0, 0, 1),
+--   (1, 'Stufe 1', 30, 15, 230, 0),
+--   (2, 'Stufe 2', 60, 45, 230, 0),
+--   (3, 'Stufe X', 90, 60, 230, 0)
 
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Aufzeichnung]') AND type in (N'U'))
 DROP TABLE [dbo].[Aufzeichnung]
