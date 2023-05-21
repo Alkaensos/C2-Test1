@@ -44,10 +44,5 @@ namespace WpfAppTest1
             get { return aktuellerStrom; }
             set { aktuellerStrom  = value; }
         }
-
-        public void getBetriebsmodus()
-        {
-
-        }
     }
 }
